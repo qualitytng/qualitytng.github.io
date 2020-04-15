@@ -1,0 +1,53 @@
+---
+---
+{% include header.html %}
+{% include categories.html %}
+<section id="content">
+{% for post in paginator.posts %}
+<article class="post" itemscope itemtype="http://schema.org/Article">
+  <h1 itemprop="name"><a itemprop="url" href="{{ site.site_url }}{{ post.url }}" title="{{ post.title | xml_escape }}" >{{ post.title | xml_escape }}</a></h1>
+  {% if post.thumbnail %}
+  <a href="{{ post.url }}"><img itemprop="image" src="{{ site.site_url }}/images/{{ post.thumbnail }}" title="{{ post.title | xml_escape }}" alt="{{ post.title | xml_escape }}" class="post_thumbnail"></a>
+  {% else %}
+  <a href="{{ post.url }}"><img itemprop="image" src="{{ site.site_url }}/images/thumbnail_default.png" alt="{{ post.title  | xml_escape }}" class="post_thumbnail"></a>
+  {% endif %}
+  <div class="excerpt" itemprop="description">
+    {{ post.excerpt }}
+  </div>
+  <div class="clear"></div>
+</article>
+{% endfor %}
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <em>{{ page }}</em>
+    {% elsif page == 1 %}
+      <a href="{{ site.site_url }}">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a>
+  {% endif %}
+  <div class="clear"></div>
+</div>
+
+
+</section><!-- end #content -->
+<div align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-7192675112301972",
+          enable_page_level_ads: true
+     });
+</script>
+</div>
+{% include footer.html %}

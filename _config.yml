@@ -16,13 +16,13 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Tuấn Anh"
+title                    : "Quality TNG Group"
 title_separator          : "-"
-name                     : "Tuấn Anh"
+name                     : "johnkey"
 description              : "My Personal Website"
-url                      : "https://holianh.github.io"
+url                      : "https://qualitytng.github.io"
 baseurl                  : # "/index"
-repository               : "holianh/holianh.github.io"
+repository               : "qualitytng/qualitytng.github.io"
 teaser                   : "/assets/images/default-th.jpg"
 #breadcrumbs              : true # , false (default)
 words_per_minute         : 200

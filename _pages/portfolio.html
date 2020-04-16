@@ -1,0 +1,18 @@
+---
+title: Portfolio
+permalink: /portfolio/
+layout: archive
+header:
+ overlay_color: "#000"
+ overlay_image: /assets/images/portfolio.jpg
+ overlay_filter: 0.6
+excerpt: "I love my works, as a Researcher, Lecturer, Programmer from Hardware, Embedded System to Software"
+author_profile: true
+---
+
+<div class="grid__wrapper">
+  {% assign items = site.portfolio | sort: 'date' | reverse %}
+  {% for post in items %}
+    {% include archive-single.html type="grid" %}
+  {% endfor %}
+</div>

@@ -1,0 +1,1239 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.12.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Cài Ubuntu cho Deep Learning - Tuấn Anh</title>
+<meta name="description" content="Cài Ubuntu, gcc, g++,… vân vân và mây mây">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Tuấn Anh">
+<meta property="og:title" content="Cài Ubuntu cho Deep Learning">
+<meta property="og:url" content="http://localhost:4000/ubuntu/driver/run/Install-Ubuntu-systems-package/">
+
+
+  <meta property="og:description" content="Cài Ubuntu, gcc, g++,… vân vân và mây mây">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/my-personal-website-th.jpg">
+
+
+
+  <meta name="twitter:site" content="@tuananhktmt">
+  <meta name="twitter:title" content="Cài Ubuntu cho Deep Learning">
+  <meta name="twitter:description" content="Cài Ubuntu, gcc, g++,… vân vân và mây mây">
+  <meta name="twitter:url" content="http://localhost:4000/ubuntu/driver/run/Install-Ubuntu-systems-package/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/my-personal-website-th.jpg">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2018-12-25T00:00:00+08:00">
+
+
+
+
+
+  
+    <meta property="article:publisher" content="https://www.facebook.com/">
+  
+
+  
+    <meta property="fb:app_id" content="2341188262621006">
+  
+
+
+<link rel="canonical" href="http://localhost:4000/ubuntu/driver/run/Install-Ubuntu-systems-package/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://localhost:4000",
+      "logo": "http://localhost:4000/assets/images/default.jpg"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Tuấn Anh",
+      "url": "http://localhost:4000",
+      "sameAs": ["https://twitter.com/tuananhktmt","https://www.facebook.com/"]
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Tuấn Anh Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      inlineMath: [['$','$']]
+    }
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<!-- https://stackoverflow.com/questions/26275645/how-to-support-latex-in-github-pages-->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+  </head>
+
+  <body class="layout--single">
+
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=2341188262621006&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Tuấn Anh</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/" >HOME</a>
+            </li><li class="masthead__menu-item">
+              <a href="/portfolio/" >PORTFOLIO</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/" >BLOG</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/" >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/" >CONTACT</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/images/my-personal-website-th.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Cài Ubuntu cho Deep Learning
+
+        
+      </h1>
+      
+        <p class="page__lead">Cài Ubuntu, gcc, g++,… vân vân và mây mây
+</p>
+      
+      
+        <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+</p>
+      
+      
+      
+    </div>
+  
+  
+    <span class="page__hero-caption">
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        
+        <a href="https://holianh.github.io">
+          <img src="/assets/images/bio-photo.jpg" alt="Tuấn Anh" itemprop="image">
+        </a>
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <a href="https://holianh.github.io"><h3 class="author__name" itemprop="name">Tuấn Anh</h3></a>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Smart-Things
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Thái Nguyên,VN</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:tuananhktmt@gmail.com"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+            <li><a href="https://holianh.github.io"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/tuananhktmt"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+            <li><a href="https://facebook.com/anh211"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+          
+        
+          
+            <li><a href="https://github.com/holianh"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+          
+            <li><a href="/keras/Keras/"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Keras</a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="http://youtube.com/tuananhktmt"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+          
+        
+      
+
+      
+<!--
+      
+        <li>
+          <a href="mailto:tuananhktmt@gmail.com">
+            <meta itemprop="email" content="tuananhktmt@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+-->
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Cài Ubuntu cho Deep Learning">
+    <meta itemprop="description" content="Cài Ubuntu, gcc, g++,… vân vân và mây mây">
+    <meta itemprop="datePublished" content="December 25, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+             
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#run-jupyter-notebook-on-server-from-local">Run jupyter notebook on server from local</a></li>
+  <li><a href="#cài-ubuntu-xong-rồi--cài-các-thứ-liên-quan">Cài Ubuntu xong rồi =&gt; cài các thứ liên quan</a>
+    <ul>
+      <li><a href="#install-anaconda">Install Anaconda</a></li>
+      <li><a href="#tham-khảo-các-hướng-dẫn-bên-ngoài">Tham khảo các hướng dẫn bên ngoài</a></li>
+      <li><a href="#cài-driver-kiểu-dễ-ăn">Cài driver kiểu dễ ăn</a>
+        <ul>
+          <li><a href="#cài-driver">Cài driver</a></li>
+          <li><a href="#cài-cuda">Cài CUDA</a></li>
+        </ul>
+      </li>
+      <li><a href="#để-cài-driver-mới-nhất">Để cài driver mới nhất:</a>
+        <ul>
+          <li><a href="#cài-dạng-manual">Cài dạng manual.</a></li>
+          <li><a href="#cách-cài">Cách cài:</a></li>
+          <li><a href="#install-via-source-file">INSTALL VIA SOURCE FILE</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#remove-cuda-toolkit">Remove Cuda toolkit</a></li>
+  <li><a href="#install-cuda-90-and-cudnn-70-for-tensorflowpytorch-gpu-on-ubuntu-1604-here">Install CUDA 9.0 and cuDNN 7.0 for TensorFlow/PyTorch (GPU) on Ubuntu 16.04: here</a></li>
+  <li><a href="#install-cuda-92-and-cudnn-71-for-pytorch-gpu-on-ubuntu-1604-here">Install CUDA 9.2 and cuDNN 7.1 for PyTorch (GPU) on Ubuntu 16.04: here</a>
+    <ul>
+      <li><a href="#1-install-nvidia-driver-version-396-via-apt-get">1. Install NVIDIA Driver Version 396 via apt-get</a></li>
+      <li><a href="#2-install-cuda-92-via-runfile">2. Install CUDA 9.2 via Runfile</a></li>
+      <li><a href="#3-install-cudnn-71">3. Install cuDNN 7.1</a></li>
+      <li><a href="#do-not-install-cuda-command-line-tools">Do NOT Install cuda-command-line-tools</a></li>
+      <li><a href="#configure-the-cuda-and-cudnn-library-paths">Configure the CUDA and cuDNN library paths</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </nav>
+          </aside>
+
+        
+        <p>Tại đây trình bày theo thứ tự ngược: dùng trước, cài sau, vì cài chỉ 1 lần, dùng mãi</p>
+
+<h1 id="run-jupyter-notebook-on-server-from-local">Run jupyter notebook on server from local</h1>
+
+<ul>
+  <li>
+    <p>Anaconda Jupyter Notebook: Run Remote Notebook on server from local:</p>
+
+    <ol>
+      <li>connect Xshell/ ssh to server.</li>
+      <li>Run On server: (example: 1080ti server)</li>
+    </ol>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  conda info <span class="nt">--envs</span>
+  <span class="nb">source </span>activate tf
+  jupyter notebook <span class="nt">--no-browser</span> <span class="nt">--ip</span><span class="o">=</span><span class="k">*</span> <span class="nt">--port</span><span class="o">=</span>1234
+  jupyter notebook <span class="nt">--no-browser</span> <span class="nt">--ip</span><span class="o">=</span>0.0.0.0 <span class="nt">--port</span><span class="o">=</span>1234  
+</code></pre></div>    </div>
+
+    <p>(port can be change)  <br />
+  result:
+  <code class="highlighter-rouge">http://(ubu or 127.0.0.1):1234/?token=113fbcd684007d6a72f8839c94637951d613b136a39b040c</code></p>
+
+    <ol>
+      <li>Run on local:
+        <ul>
+          <li>copy that address, paste to local browser</li>
+          <li>change IP address to real IP:</li>
+        </ul>
+
+        <p><code class="highlighter-rouge">http://10.1.53.1:1234/?token=113fbcd684007d6a72f8839c94637951d613b136a39b040c</code></p>
+        <ul>
+          <li>Enjoy!</li>
+        </ul>
+      </li>
+      <li>Change jupyter notebook password: <code class="highlighter-rouge">jupyter notebook password</code>.</li>
+    </ol>
+  </li>
+</ul>
+
+<h1 id="cài-ubuntu-xong-rồi--cài-các-thứ-liên-quan">Cài Ubuntu xong rồi =&gt; cài các thứ liên quan</h1>
+
+<ul>
+  <li>Vô cùng quan trọng:</li>
+</ul>
+
+<blockquote>
+  <p>Yeah, currently when you install Keras using pip or pip3 it blows off existing TF and installs the default, non-GPU version. It’d be great if there was a flag to not touch existing TF.</p>
+</blockquote>
+
+<blockquote>
+  <p>The workaround is to uninstall TF after installing Keras, and then installing the GPU version using pip or pip3 depending on your preferred python version. Not very elegant, but you gotta do what you gotta do.</p>
+</blockquote>
+
+<p>Khi cài Keras, nó sẽ cài <code class="highlighter-rouge">tensorflow</code> for <code class="highlighter-rouge">CPU</code>, nên quy trình cài đúng là:
+Nhục quá, vì cái này mà mất đứt cả tuần!
+Chi tiết, <a href="https://github.com/keras-team/keras/issues/5776#issuecomment-452602358">xem tại đây</a></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>After: install tensorflow -&gt; install keras -&gt; uninstall tensorflow -&gt; install tensorflow
+and it works! Thanks a lot!
+
+conda create <span class="nt">-n</span> ta  anaconda python
+<span class="nb">source </span>activate ta
+conda install tensorflow-gpu<span class="o">==</span>1.11 <span class="nv">cudatoolkit</span><span class="o">==</span>9.0 <span class="nv">cudnn</span><span class="o">==</span>7.1.2 h5py
+pip install pillow h5py keras
+pip uninstall tensorflow
+pip install tensorflow-gpu
+
+python
+import keras.backend as K<span class="p">;</span><span class="o">[</span>x.name <span class="k">for </span>x <span class="k">in </span>K.get_session<span class="o">()</span>.list_devices<span class="o">()]</span>
+<span class="nb">exit</span><span class="o">()</span>
+
+git clone https://github.com/fchollet/keras.git
+<span class="nb">cd </span>keras/examples
+python mnist_cnn.py
+</code></pre></div></div>
+
+<ul>
+  <li>Code check GPU đã cài OK chưa, chạy python với lệnh sau:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">keras.backend</span> <span class="k">as</span> <span class="n">K</span><span class="p">;[</span><span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">K</span><span class="o">.</span><span class="n">get_session</span><span class="p">()</span><span class="o">.</span><span class="n">list_devices</span><span class="p">()]</span>
+
+<span class="kn">from</span> <span class="nn">tensorflow.python.client</span> <span class="kn">import</span> <span class="n">device_lib</span><span class="p">;</span><span class="n">device_lib</span><span class="o">.</span><span class="n">list_local_devices</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>nếu nhìn thấy <code class="highlighter-rouge">gpu</code> là OK rồi.</p>
+
+<blockquote>
+  <p>ấy vậy, mà mình cài mãi nó chẳng hiện lên GPU mới cay chứ. Cài server mình cài có khi đến hơn năm liên tục rồi chứ chả ít. thế mà vụ này lại dính. nguyên nhân là do hôm nọ đang training, nhìn thấy nó cập nhật version mới, ngứa tay không chịu dc, thế là update. Mất cả tuần rồi cứ tranh thủ train rồi lại cài lại. Cài lại cả driver/cuda/cudnn rồi mà vẫn không được. Chưa phát hiện nguyên nhân do cái gì. Bực cái là mạng của cái cty này nó giới hạn tốc độ mới nhục chứ. Cài 1 lần cả GB mà mạng chỉ có 400KB/s thì đến mùa quýt nào mới xong?</p>
+</blockquote>
+
+<p>Cài cài này phức tạp phết</p>
+
+<h2 id="install-anaconda">Install Anaconda</h2>
+<ul>
+  <li>Install DRIVER</li>
+  <li>Install cuda: <code class="highlighter-rouge">sudo apt-get install cuda-toolkit...</code></li>
+  <li>
+    <p>bash Anaconda-xxx…</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda create <span class="nt">-n</span> tt  anaconda python
+<span class="nb">source </span>activate tt
+conda install tensorflow-gpu<span class="o">==</span>1.11 <span class="nv">cudatoolkit</span><span class="o">==</span>9.0 <span class="nv">cudnn</span><span class="o">==</span>7.1.2 h5py
+pip install pillow h5py keras
+pip uninstall tensorflow
+pip install tensorflow-gpu
+git clone https://github.com/fchollet/keras.git
+<span class="nb">cd </span>keras/examples
+python mnist_cnn.py
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Cài cuda: Nên download về máy, thay tên bằng tên đã down và bỏ wget:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+
+<span class="c"># install CUDA Toolkit v9.0</span>
+<span class="c"># instructions from https://developer.nvidia.com/cuda-downloads (linux -&gt; x86_64 -&gt; Ubuntu -&gt; 16.04 -&gt; deb)</span>
+<span class="nv">CUDA_REPO_PKG</span><span class="o">=</span><span class="s2">"cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64-deb"</span>
+wget https://developer.nvidia.com/compute/cuda/9.0/Prod/local_installers/<span class="k">${</span><span class="nv">CUDA_REPO_PKG</span><span class="k">}</span>
+<span class="nb">sudo </span>dpkg <span class="nt">-i</span> <span class="k">${</span><span class="nv">CUDA_REPO_PKG</span><span class="k">}</span>
+<span class="nb">sudo </span>apt-key adv <span class="nt">--fetch-keys</span> http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
+<span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nt">-y</span> install cuda-9-0
+
+<span class="nv">CUDA_PATCH1</span><span class="o">=</span><span class="s2">"cuda-repo-ubuntu1604-9-0-local-cublas-performance-update_1.0-1_amd64-deb"</span>
+wget https://developer.nvidia.com/compute/cuda/9.0/Prod/patches/1/<span class="k">${</span><span class="nv">CUDA_PATCH1</span><span class="k">}</span>
+<span class="nb">sudo </span>dpkg <span class="nt">-i</span> <span class="k">${</span><span class="nv">CUDA_PATCH1</span><span class="k">}</span>
+<span class="nb">sudo </span>apt-get update
+
+<span class="c"># install cuDNN v7.0</span>
+<span class="nv">CUDNN_PKG</span><span class="o">=</span><span class="s2">"libcudnn7_7.0.5.15-1+cuda9.0_amd64.deb"</span>
+wget https://github.com/ashokpant/cudnn_archive/raw/master/v7.0/<span class="k">${</span><span class="nv">CUDNN_PKG</span><span class="k">}</span>
+<span class="nb">sudo </span>dpkg <span class="nt">-i</span> <span class="k">${</span><span class="nv">CUDNN_PKG</span><span class="k">}</span>
+<span class="nb">sudo </span>apt-get update
+
+<span class="c"># install NVIDIA CUDA Profile Tools Interface ( libcupti-dev v9.0)</span>
+<span class="nb">sudo </span>apt-get install cuda-command-line-tools-9-0
+
+<span class="c"># set environment variables</span>
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PATH</span><span class="k">}</span>:/usr/local/cuda-9.0/bin
+<span class="nb">export </span><span class="nv">CUDA_HOME</span><span class="o">=</span><span class="k">${</span><span class="nv">CUDA_HOME</span><span class="k">}</span>:/usr/local/cuda:/usr/local/cuda-9.0
+<span class="nb">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="k">}</span>:/usr/local/cuda-9.0/lib64
+<span class="nb">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/usr/local/cuda/extras/CUPTI/lib64
+</code></pre></div></div>
+
+<h2 id="tham-khảo-các-hướng-dẫn-bên-ngoài">Tham khảo các hướng dẫn bên ngoài</h2>
+<ul>
+  <li>Link chính thức <a href="https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html">hướng dẫn cài driver &amp; cuda</a></li>
+  <li>Tham khảo bản này: cho Ubuntu: <a href="https://medium.com/codezillas/step-by-step-guide-to-install-tensorflow-gpu-on-ubuntu-18-04-lts-6feceb0df5c0">tại đây</a></li>
+  <li>
+    <p><a href="https://stackoverflow.com/questions/31326015/how-to-verify-cudnn-installation/36978616#36978616">How to verify CuDNN installation?</a></p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  The installation of CuDNN is just copying some files. Hence to check if CuDNN is installed (and which version you have), you only need to check those files.
+
+  Install CuDNN
+  Step 1: Register an nvidia developer account and [download](https://developer.nvidia.com/cudnn) cudnn here (about 80 MB). You might need `nvcc --version` to get your cuda version.
+
+  Step 2: Check where your cuda installation is. For most people, it will be `/usr/local/cuda/`. You can check it with `which nvcc`.
+
+  Step 3: Copy the files:
+
+  $ cd folder/extracted/contents
+  $ sudo cp include/cudnn.h /usr/local/cuda/include
+  $ sudo cp lib64/libcudnn* /usr/local/cuda/lib64
+  $ sudo chmod a+r /usr/local/cuda/lib64/libcudnn*
+
+  Check version
+  You might have to adjust the path. See step 2 of the installation.
+
+  $ cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
+  Notes
+  When you get an error like
+
+  F tensorflow/stream_executor/cuda/cuda_dnn.cc:427] could not set cudnn filter descriptor: CUDNN_STATUS_BAD_PARAM
+  with TensorFlow, you might consider using CuDNN v4 instead of v5.
+
+  Ubuntu users who installed it via apt: [here](https://askubuntu.com/a/767270/10425)
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="cài-driver-kiểu-dễ-ăn">Cài driver kiểu dễ ăn</h2>
+
+<h3 id="cài-driver">Cài driver</h3>
+<ul>
+  <li>
+    <p>Tại máy trạm có thể truy cập vào máy chủ theo cách: <code class="highlighter-rouge">ssh -Y u@10.1.53.1</code></p>
+  </li>
+  <li>Mở windows <code class="highlighter-rouge">software &amp; Update</code>  hay <code class="highlighter-rouge">driver &amp; software</code> lên:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>software-properties-gtk
+</code></pre></div>    </div>
+  </li>
+  <li>uninstall driver cũ nếu như đã cài rồi (trong cửa sổ trên không cho chọn cài cái khác):
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/bin/nvidia-uninstall
+</code></pre></div>    </div>
+    <p>Cài trên này thì được driver ổn định, nhưng không phải là mới nhất.</p>
+  </li>
+  <li>Reboot!</li>
+</ul>
+
+<h3 id="cài-cuda">Cài CUDA</h3>
+
+<p>Cái này phải phù hợp với driver version</p>
+
+<h2 id="để-cài-driver-mới-nhất">Để cài driver mới nhất:</h2>
+
+<h3 id="cài-dạng-manual">Cài dạng manual.</h3>
+
+<ul>
+  <li>Download file cài về</li>
+  <li>cài gcc, nếu không phải là ver &gt; 7.2.0:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>u@ubu:~<span class="nv">$ </span>gcc-7 <span class="nt">-v</span>
+Using built-in specs.
+<span class="nv">COLLECT_GCC</span><span class="o">=</span>gcc-7
+<span class="nv">COLLECT_LTO_WRAPPER</span><span class="o">=</span>/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+<span class="nv">OFFLOAD_TARGET_NAMES</span><span class="o">=</span>nvptx-none
+<span class="nv">OFFLOAD_TARGET_DEFAULT</span><span class="o">=</span>1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure <span class="nt">-v</span> <span class="nt">--with-pkgversion</span><span class="o">=</span><span class="s1">'Ubuntu 7.2.0-8ubuntu3.2'</span> <span class="nt">--with-bugurl</span><span class="o">=</span>file:///usr/share/doc/gcc-7/README.Bugs <span class="nt">--enable-languages</span><span class="o">=</span>c,ada,c++,go,brig,d,fortran,objc,obj-c++ <span class="nt">--prefix</span><span class="o">=</span>/usr <span class="nt">--with-gcc-major-version-only</span> <span class="nt">--program-suffix</span><span class="o">=</span><span class="nt">-7</span> <span class="nt">--program-prefix</span><span class="o">=</span>x86_64-linux-gnu- <span class="nt">--enable-shared</span> <span class="nt">--enable-linker-build-id</span> <span class="nt">--libexecdir</span><span class="o">=</span>/usr/lib <span class="nt">--without-included-gettext</span> <span class="nt">--enable-threads</span><span class="o">=</span>posix <span class="nt">--libdir</span><span class="o">=</span>/usr/lib <span class="nt">--enable-nls</span> <span class="nt">--with-sysroot</span><span class="o">=</span>/ <span class="nt">--enable-clocale</span><span class="o">=</span>gnu <span class="nt">--enable-libstdcxx-debug</span> <span class="nt">--enable-libstdcxx-time</span><span class="o">=</span>yes <span class="nt">--with-default-libstdcxx-abi</span><span class="o">=</span>new <span class="nt">--enable-gnu-unique-object</span> <span class="nt">--disable-vtable-verify</span> <span class="nt">--enable-libmpx</span> <span class="nt">--enable-plugin</span> <span class="nt">--enable-default-pie</span> <span class="nt">--with-system-zlib</span> <span class="nt">--with-target-system-zlib</span> <span class="nt">--enable-objc-gc</span><span class="o">=</span>auto <span class="nt">--enable-multiarch</span> <span class="nt">--disable-werror</span> <span class="nt">--with-arch-32</span><span class="o">=</span>i686 <span class="nt">--with-abi</span><span class="o">=</span>m64 <span class="nt">--with-multilib-list</span><span class="o">=</span>m32,m64,mx32 <span class="nt">--enable-multilib</span> <span class="nt">--with-tune</span><span class="o">=</span>generic <span class="nt">--enable-offload-targets</span><span class="o">=</span>nvptx-none <span class="nt">--without-cuda-driver</span> <span class="nt">--enable-checking</span><span class="o">=</span>release <span class="nt">--build</span><span class="o">=</span>x86_64-linux-gnu <span class="nt">--host</span><span class="o">=</span>x86_64-linux-gnu <span class="nt">--target</span><span class="o">=</span>x86_64-linux-gnu
+Thread model: posix
+gcc version 7.2.0 <span class="o">(</span>Ubuntu 7.2.0-8ubuntu3.2<span class="o">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="cách-cài">Cách cài:</h3>
+
+<p>Xem bản gốc <a href="https://askubuntu.com/questions/26498/how-to-choose-the-default-gcc-and-g-version">tại đây</a> và <a href="https://askubuntu.com/questions/949473/installing-gcc-7-2-via-apt">tại đây</a></p>
+<ol>
+  <li>
+    <p>Remove:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>update-alternatives <span class="nt">--remove-all</span> gcc
+ <span class="nb">sudo </span>update-alternatives <span class="nt">--remove-all</span> g++   
+</code></pre></div>    </div>
+  </li>
+  <li>Install:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>env <span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive                                    <span class="se">\</span>
+      bash <span class="nt">-c</span> <span class="s1">'apt-get install -y python-software-properties lsb-release &amp;&amp; \
+             echo -e "Package: gcc-7\\nPin: release n=$(lsb_release -sc)\\nPin-Priority: 990" &gt; /etc/apt/preferences.d/gcc-7 \
+             apt-add-repository -yu ppa:ubuntu-toolchain-r/test &amp;&amp;              \
+             apt-get install -y gcc-7'</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Set Alternative:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>update-alternatives <span class="nt">--install</span> /usr/bin/gcc gcc /usr/bin/gcc-7.2 10
+ <span class="nb">sudo </span>update-alternatives <span class="nt">--install</span> /usr/bin/g++ g++ /usr/bin/g++-7.2 10
+ <span class="nb">sudo </span>update-alternatives <span class="nt">--config</span> gcc
+ <span class="nb">sudo </span>update-alternatives <span class="nt">--config</span> g++        
+</code></pre></div>    </div>
+    <ul>
+      <li>Cài  NVIDIA DRIVER 390.77:</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Tham khảo <a href="https://www.elinuxtutorials.com/2018/07/install-nvidia-driver-390-77-on-ubuntu-linuxmint/">tại đây</a></p>
+
+<h3 id="install-via-source-file">INSTALL VIA SOURCE FILE</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    1. Remove older version of NVIDIA if your graphic is supported
+    sudo apt-get purge nvidia*
+
+    2. Reboot the system
+
+    3. Download the Nvidia Driver 390.77
+    wget http://us.download.nvidia.com/XFree86/Linux-x86_64/390.77/NVIDIA-Linux-x86_64-390.77.run
+
+    or: https://www.nvidia.com/object/unix.html
+
+    4. Switch to command prompt and stop the running Graphics session
+    sudo service lightdm stop
+    sudo service gdm stop
+
+    5. Give execute permissions to the installer
+    sudo chmod 755 NVIDIA-Linux-x86_64-390.77.run
+
+    6.Install the Nvidia 390.77 driver
+    sudo ./NVIDIA-Linux-x86_64-390.77.run
+</code></pre></div></div>
+
+<h1 id="remove-cuda-toolkit">Remove Cuda toolkit</h1>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /usr/local/cuda-9.0/bin
+<span class="nb">sudo</span> ./uninstall_cuda_9.0.pl
+
+<span class="nb">sudo </span>rm <span class="nt">-rd</span> /usr/local/cuda-9.0
+
+<span class="nb">sudo </span>apt-get remove nvidia-cuda-toolkit
+
+</code></pre></div></div>
+
+<p>Purging config/data</p>
+
+<p><code class="highlighter-rouge">sudo apt-get purge nvidia-cuda-toolkit</code> or</p>
+
+<p><code class="highlighter-rouge">sudo apt-get purge --auto-remove nvidia-cuda-toolkit</code></p>
+
+<p>Additionally, delete the <code class="highlighter-rouge">/opt/cuda</code> and <code class="highlighter-rouge">~/NVIDIA_GPU_Computing_SDK</code> folders if they are present. and remove the export <code class="highlighter-rouge">PATH=$PATH:/opt/cuda/bin</code> and <code class="highlighter-rouge">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/cuda/lib:/opt/cuda/lib64</code> lines of the <code class="highlighter-rouge">~/.bash_profile</code> file <a href="https://askubuntu.com/questions/530043/removing-nvidia-cuda-toolkit-and-installing-new-one" title="Removing nvidia cuda toolkit and installing new one">1</a></p>
+
+<h1 id="install-cuda-90-and-cudnn-70-for-tensorflowpytorch-gpu-on-ubuntu-1604-here">Install CUDA 9.0 and cuDNN 7.0 for TensorFlow/PyTorch (GPU) on Ubuntu 16.04: <a href="https://medium.com/@zhanwenchen/install-cuda-and-cudnn-for-tensorflow-gpu-on-ubuntu-79306e4ac04e">here</a></h1>
+
+<h1 id="install-cuda-92-and-cudnn-71-for-pytorch-gpu-on-ubuntu-1604-here">Install CUDA 9.2 and cuDNN 7.1 for PyTorch (GPU) on Ubuntu 16.04: <a href="https://medium.com/@zhanwenchen/install-cuda-9-2-and-cudnn-7-1-for-tensorflow-pytorch-gpu-on-ubuntu-16-04-1822ab4b2421">here</a></h1>
+
+<h2 id="1-install-nvidia-driver-version-396-via-apt-get">1. Install NVIDIA Driver Version 396 via apt-get</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>add-apt-repository ppa:graphics-drivers/ppa
+<span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get install nvidia-396 nvidia-modprobe
+</code></pre></div></div>
+<p>You may be prompted to disable Secure Boot. If so, select <strong>Disable</strong>. Then reboot your machine but <strong>enter BIOS to disable Secure Boot</strong>. Typically you can enter BIOS by hitting F12 rapidly as soon as the system restarts.</p>
+
+<p>To verify installation, restart your machine with reboot and type <code class="highlighter-rouge">nvidia-smi</code>.</p>
+
+<h2 id="2-install-cuda-92-via-runfile">2. Install CUDA 9.2 via Runfile</h2>
+
+<p>The CUDA runfile installer can be downloaded from <a href="https://developer.nvidia.com/cuda-downloads">NVIDIA’s website</a>. Choose the runfile option.</p>
+
+<p>What you download is a package the following three components:</p>
+
+<ul>
+  <li>an NVIDIA driver installer, but usually of stale version;</li>
+  <li>the actual CUDA installer;</li>
+  <li>the CUDA samples installer;</li>
+</ul>
+
+<p>I suggest extracting the above three components and executing 2 and 3 separately (remember we installed the driver ourselves already). To extract them, execute the runfile installer with <code class="highlighter-rouge">--extract</code> option:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod +x cuda_9.2.148_396.37_linux-run
+./cuda_9.2.148_396.37_linux-run <span class="nt">--extract</span><span class="o">=</span><span class="nv">$HOME</span>
+</code></pre></div></div>
+
+<p>You should have unpacked three components: <code class="highlighter-rouge">NVIDIA-Linux-x86_64-396.37.run</code> (1. NVIDIA driver that we ignore), <code class="highlighter-rouge">cuda-linux.9.2.148-24330188.run</code> (2. CUDA 9.2 installer), and <code class="highlighter-rouge">cuda-samples.9.2.148-24330188-linux.run</code> (3. CUDA 9.2 Samples).</p>
+
+<p>Execute the second one to install the CUDA Toolkit 9.2:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo</span> ./cuda-linux.9.2.148-24330188.run
+</code></pre></div></div>
+<p>You now have to accept the license by scrolling down to the bottom (hold the “d” key or <code class="highlighter-rouge">Ctr_C</code> on your keyboard) and enter <code class="highlighter-rouge">“accept”</code>. Next accept the defaults.</p>
+
+<p>To verify our CUDA installation, install the sample tests by</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo</span> ./cuda-samples.9.2.148-24330188-linux.run
+</code></pre></div></div>
+
+<p>After the installation finishes, you must configure the runtime library.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>bash <span class="nt">-c</span> <span class="s2">"echo /usr/local/cuda/lib64/ &gt; /etc/ld.so.conf.d/cuda.conf"</span>
+<span class="nb">sudo </span>ldconfig
+</code></pre></div></div>
+
+<p>It is also recommended for Ubuntu users to append string <code class="highlighter-rouge">/usr/local/cuda/bin</code> to system file <code class="highlighter-rouge">/etc/environment</code> so that <code class="highlighter-rouge">nvcc</code> will be included in <code class="highlighter-rouge">$PATH</code>. This will take effect after reboot. To do that, you just have to</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>vim /etc/environment
+
+<span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/usr/local/cuda/bin
+<span class="nb">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/cuda/lib64/
+</code></pre></div></div>
+
+<p>After a reboot, let’s test our installation by making and invoking our tests:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> /usr/local/cuda-9.2/samples
+<span class="nv">$ </span><span class="nb">sudo </span>make
+</code></pre></div></div>
+<p>It’s a long process with many irrelevant warnings about deprecated architectures (<code class="highlighter-rouge">sm_20</code> and such ancient GPUs). After it completes, run <code class="highlighter-rouge">deviceQuery</code> and <code class="highlighter-rouge">p2pBandwidthLatencyTest</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> /usr/local/cuda-9.2/samples/bin/x86_64/linux/release
+<span class="nv">$ </span>./deviceQuery
+
+./deviceQuery Starting...
+CUDA Device Query <span class="o">(</span>Runtime API<span class="o">)</span> version <span class="o">(</span>CUDART static linking<span class="o">)</span>
+Detected 1 CUDA Capable device<span class="o">(</span>s<span class="o">)</span>
+....
+deviceQuery, CUDA Driver <span class="o">=</span> CUDART, CUDA Driver Version <span class="o">=</span> 9.2, CUDA Runtime Version <span class="o">=</span> 9.2, NumDevs <span class="o">=</span> 1
+Result <span class="o">=</span> PASS
+</code></pre></div></div>
+<p>Cleanup: if <code class="highlighter-rouge">./deviceQuery</code> works, remember to <code class="highlighter-rouge">rm</code> the 4 files (1 downloaded and 3 extracted).</p>
+
+<h2 id="3-install-cudnn-71">3. Install cuDNN 7.1</h2>
+<p>The recommended way to install cuDNN 7.1 is to download all 3 .deb files. The .tgz installation approach doesn’t allow verification by running code samples (no way to install the code samples .deb after .tgz installation).</p>
+
+<p>The following steps are pretty much the same as the installation guide using .deb files (strange that the cuDNN guide is better than the CUDA one).</p>
+
+<ul>
+  <li>Go to the cuDNN download page (need registration) and select the latest cuDNN 7.1 version made for CUDA 9.2.</li>
+  <li>Download all 3 .deb files: the runtime library, the developer library, and the code samples library for Ubuntu 16.04.</li>
+  <li>
+    <p>In your download folder, install them in the same order:</p>
+
+    <p><code class="highlighter-rouge">sudo dpkg -i libcudnn7_7.1.4.18–1+cuda9.2_amd64.deb</code> (the runtime library),</p>
+
+    <p><code class="highlighter-rouge">sudo dpkg -i libcudnn7-dev_7.1.4.18–1+cuda9.2_amd64.deb</code> (the developer library), and</p>
+
+    <p><code class="highlighter-rouge">sudo dpkg -i libcudnn7-doc_7.1.4.18–1+cuda9.2_amd64.deb</code> (the code samples).</p>
+  </li>
+</ul>
+
+<p>Now we can verify the cuDNN installation (below is just the official guide, which surprisingly works out of the box):</p>
+
+<ul>
+  <li>Copy the code samples somewhere you have write access: <code class="highlighter-rouge">cp -r /usr/src/cudnn_samples_v7/ ~</code>.</li>
+  <li>Go to the MNIST example code: <code class="highlighter-rouge">cd ~/cudnn_samples_v7/mnistCUDNN</code>.</li>
+  <li>Compile the MNIST example: <code class="highlighter-rouge">make clean &amp;&amp; make</code>.</li>
+  <li>Run the MNIST example: <code class="highlighter-rouge">./mnistCUDNN</code>. If your installation is successful, you should see <code class="highlighter-rouge">Test passed!</code> at the end of the output.</li>
+</ul>
+
+<h2 id="do-not-install-cuda-command-line-tools">Do NOT Install cuda-command-line-tools</h2>
+<p>Contrary to the official TensorFlow installation docs, you don’t need to install <code class="highlighter-rouge">cuda-command-line-tools</code> because it’s already installed in this version of CUDA and cuDNN. If you<code class="highlighter-rouge"> apt-get</code> it, you won’t find it.</p>
+
+<h2 id="configure-the-cuda-and-cudnn-library-paths">Configure the CUDA and cuDNN library paths</h2>
+<p>What you do need to do, however, is exporting environment variables <code class="highlighter-rouge">LD_LIBRARY_PATH</code> in your <code class="highlighter-rouge">.bashrc</code> file:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># put the following line in the end or your .bashrc file</span>
+<span class="nb">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:/usr/local/cuda/extras/CUPTI/lib64
+</code></pre></div></div>
+
+<p>And source it by <code class="highlighter-rouge">source ~/.bashrc</code>.</p>
+
+<p>.</p>
+
+
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#driver" class="page__taxonomy-item" rel="tag">Driver</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#gcc-g" class="page__taxonomy-item" rel="tag">gcc g++</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#nvidia" class="page__taxonomy-item" rel="tag">Nvidia</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ubuntu" class="page__taxonomy-item" rel="tag">Ubuntu</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#driver" class="page__taxonomy-item" rel="tag">Driver</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#run" class="page__taxonomy-item" rel="tag">Run</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#ubuntu" class="page__taxonomy-item" rel="tag">Ubuntu</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-12-25T00:00:00+08:00">December 25, 2018</time></p>
+        
+      </footer>
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Leave a comment</h4>
+      <section class="fb-comments" data-href="http://localhost:4000/ubuntu/driver/run/Install-Ubuntu-systems-package/" data-mobile="true" data-num-posts="10" data-width="100%" data-colorscheme="light"></section>
+    
+</div>
+
+      <!-- <section class="page__share">
+<h3> Bình luận chung cho cả trang web =>> thêm link vào bình luận nhé.</h3>
+<div class="fb-comments" data-href="https://holianh.github.io/" data-numposts="10"></div>
+</section>  -->
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=tuananhktmt&text=C%C3%A0i+Ubuntu+cho+Deep+Learning%20http%3A%2F%2Flocalhost%3A4000%2Fubuntu%2Fdriver%2Frun%2FInstall-Ubuntu-systems-package%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fubuntu%2Fdriver%2Frun%2FInstall-Ubuntu-systems-package%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Fubuntu%2Fdriver%2Frun%2FInstall-Ubuntu-systems-package%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fubuntu%2Fdriver%2Frun%2FInstall-Ubuntu-systems-package%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/web/FaceBook-comments-in-pages/" class="pagination--pager" title="Thêm Facebook comments vào trang web
+">Previous</a>
+    
+    
+      <a href="/asr/deep_learning/asr_Papers_measurements/" class="pagination--pager" title="Measurements in ASR
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    <!--  -->
+
+  </article>
+
+
+
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/postimg/freeDBs.png"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a class="no-underline" href="/database/source%20code/Database-Resources/" rel="permalink">Free Code-Database Resources
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Links download CODE và Database miễn phí
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://miro.medium.com/max/1304/1*uokXCDa_O7jzfbUC9qS6cg.png"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a class="no-underline" href="/keras/Keras-Code-Ngon/" rel="permalink">Link code ngon
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://miro.medium.com/max/1304/1*uokXCDa_O7jzfbUC9qS6cg.png"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a class="no-underline" href="/keras/Keras-Modules/" rel="permalink">Keras with Python
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://miro.medium.com/max/1304/1*uokXCDa_O7jzfbUC9qS6cg.png"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a class="no-underline" href="/keras/Keras/" rel="permalink">Keras with Python
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- <center>
+<div class="fb-comments" data-href="https://holianh.github.io/" data-numposts="10"></div>
+</center> -->
+
+<!-- end custom footer snippets -->
+
+        <!-- <center>
+<div class="fb-comments" data-href="https://holianh.github.io/" data-numposts="10"></div>
+</center> -->
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/tuananhktmt"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://facebook.com/anh211"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/holianh"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://youtube.com/tuananhktmt"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> youtube</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Tuấn Anh. Made with ❤</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+
+
+
+
+
+  
+      <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=2341188262621006";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    
+
+
+
+  </body>
+</html>

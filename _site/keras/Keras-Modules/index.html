@@ -1,0 +1,960 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.12.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Keras with Python - Tuấn Anh</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Tuấn Anh">
+<meta property="og:title" content="Keras with Python">
+<meta property="og:url" content="http://localhost:4000/keras/Keras-Modules/">
+
+
+  <meta property="og:description" content="">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/DL1.jpg">
+
+
+
+  <meta name="twitter:site" content="@tuananhktmt">
+  <meta name="twitter:title" content="Keras with Python">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:url" content="http://localhost:4000/keras/Keras-Modules/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/DL1.jpg">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2018-12-29T00:00:00+08:00">
+
+
+
+
+
+  
+    <meta property="article:publisher" content="https://www.facebook.com/">
+  
+
+  
+    <meta property="fb:app_id" content="2341188262621006">
+  
+
+
+<link rel="canonical" href="http://localhost:4000/keras/Keras-Modules/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://localhost:4000",
+      "logo": "http://localhost:4000/assets/images/default.jpg"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Tuấn Anh",
+      "url": "http://localhost:4000",
+      "sameAs": ["https://twitter.com/tuananhktmt","https://www.facebook.com/"]
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Tuấn Anh Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      inlineMath: [['$','$']]
+    }
+  });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<!-- https://stackoverflow.com/questions/26275645/how-to-support-latex-in-github-pages-->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+  </head>
+
+  <body class="layout--single">
+
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=2341188262621006&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">Tuấn Anh</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/" >HOME</a>
+            </li><li class="masthead__menu-item">
+              <a href="/portfolio/" >PORTFOLIO</a>
+            </li><li class="masthead__menu-item">
+              <a href="/blog/" >BLOG</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/" >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/" >CONTACT</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #000; background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/images/DL1.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Keras with Python
+
+        
+      </h1>
+      
+        <p class="page__lead">
+</p>
+      
+      
+        <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        
+        <a href="https://holianh.github.io">
+          <img src="/assets/images/bio-photo.jpg" alt="Tuấn Anh" itemprop="image">
+        </a>
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <a href="https://holianh.github.io"><h3 class="author__name" itemprop="name">Tuấn Anh</h3></a>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Smart-Things
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Thái Nguyên,VN</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:tuananhktmt@gmail.com"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+            <li><a href="https://holianh.github.io"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/tuananhktmt"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+          
+        
+          
+            <li><a href="https://facebook.com/anh211"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+          
+        
+          
+            <li><a href="https://github.com/holianh"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+          
+            <li><a href="/keras/Keras/"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Keras</a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="http://youtube.com/tuananhktmt"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+          
+        
+      
+
+      
+<!--
+      
+        <li>
+          <a href="mailto:tuananhktmt@gmail.com">
+            <meta itemprop="email" content="tuananhktmt@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+-->
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+        <img src=
+        
+          "https://miro.medium.com/max/1304/1*uokXCDa_O7jzfbUC9qS6cg.png"
+        
+        alt="logo">
+      
+      <h3>Programming</h3>
+      <p>Các hàm quan trọng hay dùng trong Keras</p>
+
+    
+      
+      <h3></h3>
+      
+
+    
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Keras with Python">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="December 29, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+
+      <section class="page__content" itemprop="text">
+             
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#1-parallelmodel">1. ParallelModel:</a></li>
+</ul>
+
+            </nav>
+          </aside>
+
+        
+        <h1 id="1-parallelmodel">1. ParallelModel:</h1>
+<p>Since origin “ParallelModel” does not work for keras 2.2.4 due to KM.model’s change.So I decide to rewrite the ParallelModel to adapt the latest keras version.</p>
+
+<p>However simple adaption is boring, so I combined the “multi_gpu_model” from keras official code and the Matterports code to create this version. Since the keras’ code claims that the “split in place tech” runs faster and more efficient on gpu memery.</p>
+
+<p>Here is the code, hope this helps <a href="https://github.com/matterport/Mask_RCNN/issues/1187">origin</a></p>
+
+<p>Config:</p>
+<ul>
+  <li>keras 2.2.4</li>
+  <li>tf 1.12</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"""
+Multi-GPU Support for Keras 2.2.4.
+
+Copyright (c) 2018 EastDawn, Inc.
+Licensed under the MIT License (see LICENSE for details)
+Written by Ziyigogogo
+
+Make the keras official multi-gpu more usable as the Matterport's
+while also making use of the "inplace split tech" from official code
+achieving faster speed &amp; gpu memory efficiency
+
+
+Ideas and a code snippets from these sources:
+https://github.com/keras-team/keras/blob/master/keras/utils/multi_gpu_utils.py
+https://github.com/matterport/Mask_RCNN/blob/master/mrcnn/parallel_model.py
+
+"""</span>
+
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="kn">import</span> <span class="nn">keras.backend</span> <span class="k">as</span> <span class="n">K</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+<span class="kn">from</span> <span class="nn">keras.layers.core</span> <span class="kn">import</span> <span class="n">Lambda</span>
+<span class="kn">from</span> <span class="nn">keras.layers.merge</span> <span class="kn">import</span> <span class="n">concatenate</span>
+<span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Model</span>
+<span class="kn">from</span> <span class="nn">keras.utils.generic_utils</span> <span class="kn">import</span> <span class="n">to_list</span>
+
+
+<span class="k">class</span> <span class="nc">MultiGpuModel</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">template_model</span><span class="p">,</span> <span class="n">num_gpus</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">MultiGpuModel</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">get_inputs_and_outputs</span><span class="p">(</span><span class="n">template_model</span><span class="p">,</span> <span class="n">num_gpus</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inner_model</span> <span class="o">=</span> <span class="n">template_model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_gpus</span> <span class="o">=</span> <span class="n">num_gpus</span>
+
+    <span class="k">def</span> <span class="nf">__getattribute__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attrname</span><span class="p">):</span>
+        <span class="s">"""Redirect loading and saving methods to the inner model. That's where
+        the weights are stored."""</span>
+        <span class="k">if</span> <span class="s">'load'</span> <span class="ow">in</span> <span class="n">attrname</span> <span class="ow">or</span> <span class="s">'save'</span> <span class="ow">in</span> <span class="n">attrname</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">inner_model</span><span class="p">,</span> <span class="n">attrname</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">(</span><span class="n">MultiGpuModel</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__getattribute__</span><span class="p">(</span><span class="n">attrname</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">summary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="s">"""Override summary() to display summaries of both, the wrapper and inner models."""</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">MultiGpuModel</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inner_model</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_inputs_and_outputs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">template_model</span><span class="p">,</span> <span class="n">num_gpus</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"start preparing multi-gpu model on {} gpus..."</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num_gpus</span><span class="p">))</span>
+        <span class="n">tic</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+        <span class="n">available_devices</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_normalize_device_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_available_devices</span><span class="p">()]</span>
+        <span class="n">target_gpu_ids</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_gpus</span><span class="p">)</span>
+        <span class="n">target_devices</span> <span class="o">=</span> <span class="p">[</span><span class="s">'/cpu:0'</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s">'/gpu:{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">target_gpu_ids</span><span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">target_devices</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">device</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">available_devices</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span>
+                    <span class="s">'To call `ParallelModel` with `num_gpus={}`, '</span>
+                    <span class="s">'we expect the following devices to be available: {}. '</span>
+                    <span class="s">'However this machine only has: {}. '</span>
+                    <span class="s">'Try reducing `num_gpus`.'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">num_gpus</span><span class="p">,</span> <span class="n">target_devices</span><span class="p">,</span> <span class="n">available_devices</span><span class="p">)</span>
+                <span class="p">)</span>
+
+        <span class="n">all_outputs</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">template_model</span><span class="o">.</span><span class="n">outputs</span><span class="p">))]</span>
+        <span class="c"># Place a copy of the model on each GPU, each getting a slice of the inputs.</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">gpu_id</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">target_gpu_ids</span><span class="p">):</span>
+            <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s">'/gpu:{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gpu_id</span><span class="p">)):</span>
+                <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s">'replica_{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gpu_id</span><span class="p">)):</span>
+                    <span class="n">inputs</span> <span class="o">=</span> <span class="p">[]</span>
+                    <span class="c"># Retrieve a slice of the input.</span>
+                    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">template_model</span><span class="o">.</span><span class="n">inputs</span><span class="p">:</span>
+                        <span class="c"># In-place input splitting 5% ~ 12% faster and also less GPU memory duplication.</span>
+                        <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">device</span><span class="p">):</span>
+                            <span class="n">input_shape</span> <span class="o">=</span> <span class="n">K</span><span class="o">.</span><span class="n">int_shape</span><span class="p">(</span><span class="n">x</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]</span>
+                            <span class="n">slice_i</span> <span class="o">=</span> <span class="n">Lambda</span><span class="p">(</span>
+                                <span class="bp">self</span><span class="o">.</span><span class="n">get_slice</span><span class="p">,</span>
+                                <span class="n">output_shape</span><span class="o">=</span><span class="n">input_shape</span><span class="p">,</span>
+                                <span class="n">arguments</span><span class="o">=</span><span class="p">{</span><span class="s">'i'</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span> <span class="s">'parts'</span><span class="p">:</span> <span class="n">num_gpus</span><span class="p">}</span>
+                            <span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+                            <span class="n">inputs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">slice_i</span><span class="p">)</span>
+
+                    <span class="c"># Apply model on slice</span>
+                    <span class="c"># (creating a model replica on the target device).</span>
+                    <span class="n">outputs</span> <span class="o">=</span> <span class="n">template_model</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+                    <span class="n">outputs</span> <span class="o">=</span> <span class="n">to_list</span><span class="p">(</span><span class="n">outputs</span><span class="p">)</span>
+
+                    <span class="c"># Save the outputs for merging back together later.</span>
+                    <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">outputs</span><span class="p">)):</span>
+                        <span class="n">all_outputs</span><span class="p">[</span><span class="n">o</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">outputs</span><span class="p">[</span><span class="n">o</span><span class="p">])</span>
+
+        <span class="c"># Deduplicate output names to handle Siamese networks.</span>
+        <span class="n">occurrences</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">template_model</span><span class="o">.</span><span class="n">output_names</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">n</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">occurrences</span><span class="p">:</span>
+                <span class="n">occurrences</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">occurrences</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">conflict_counter</span> <span class="o">=</span> <span class="p">{</span><span class="n">n</span><span class="p">:</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">occurrences</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">}</span>
+        <span class="n">output_names</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">template_model</span><span class="o">.</span><span class="n">output_names</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">conflict_counter</span><span class="p">:</span>
+                <span class="n">conflict_counter</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">n</span> <span class="o">+=</span> <span class="s">'_{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">conflict_counter</span><span class="p">[</span><span class="n">n</span><span class="p">])</span>
+            <span class="n">output_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s">'/cpu:0'</span><span class="p">):</span>
+            <span class="n">merged</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">outputs</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">output_names</span><span class="p">,</span> <span class="n">all_outputs</span><span class="p">):</span>
+
+                <span class="k">if</span> <span class="n">K</span><span class="o">.</span><span class="n">int_shape</span><span class="p">(</span><span class="n">outputs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="p">():</span>
+                    <span class="c"># Average</span>
+                    <span class="n">m</span> <span class="o">=</span> <span class="n">Lambda</span><span class="p">(</span><span class="k">lambda</span> <span class="n">output</span><span class="p">:</span> <span class="n">tf</span><span class="o">.</span><span class="n">add_n</span><span class="p">(</span><span class="n">output</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">outputs</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)(</span><span class="n">outputs</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c"># Concatenate</span>
+                    <span class="n">m</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+                <span class="n">merged</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+        <span class="n">toc</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"multi-gpu model done! Cost: {}s"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">toc</span> <span class="o">-</span> <span class="n">tic</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s">'inputs'</span><span class="p">:</span> <span class="n">template_model</span><span class="o">.</span><span class="n">inputs</span><span class="p">,</span>
+            <span class="s">'outputs'</span><span class="p">:</span> <span class="n">merged</span>
+        <span class="p">}</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_get_available_devices</span><span class="p">():</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">K</span><span class="o">.</span><span class="n">get_session</span><span class="p">()</span><span class="o">.</span><span class="n">list_devices</span><span class="p">()]</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_normalize_device_name</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s">'/'</span> <span class="o">+</span> <span class="s">':'</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'/'</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">':'</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">:])</span>
+        <span class="k">return</span> <span class="n">name</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">get_slice</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">parts</span><span class="p">):</span>
+        <span class="n">shape</span> <span class="o">=</span> <span class="n">K</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">batch_size</span> <span class="o">=</span> <span class="n">shape</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">input_shape</span> <span class="o">=</span> <span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="n">step</span> <span class="o">=</span> <span class="n">batch_size</span> <span class="o">//</span> <span class="n">parts</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">parts</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="n">batch_size</span> <span class="o">-</span> <span class="n">step</span> <span class="o">*</span> <span class="n">i</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">size</span> <span class="o">=</span> <span class="n">step</span>
+        <span class="n">size</span> <span class="o">=</span> <span class="n">K</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">size</span><span class="p">,</span> <span class="n">input_shape</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">stride</span> <span class="o">=</span> <span class="n">K</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">step</span><span class="p">,</span> <span class="n">input_shape</span> <span class="o">*</span> <span class="mi">0</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">stride</span> <span class="o">*</span> <span class="n">i</span>
+        <span class="k">return</span> <span class="n">K</span><span class="o">.</span><span class="nb">slice</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =</li>
+  <li>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =</li>
+</ul>
+
+
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#deep-learning" class="page__taxonomy-item" rel="tag">Deep-Learning</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#keras" class="page__taxonomy-item" rel="tag">Keras</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#save-load" class="page__taxonomy-item" rel="tag">Save/Load</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#keras" class="page__taxonomy-item" rel="tag">Keras</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-12-29T00:00:00+08:00">December 29, 2018</time></p>
+        
+      </footer>
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Leave a comment</h4>
+      <section class="fb-comments" data-href="http://localhost:4000/keras/Keras-Modules/" data-mobile="true" data-num-posts="10" data-width="100%" data-colorscheme="light"></section>
+    
+</div>
+
+      <!-- <section class="page__share">
+<h3> Bình luận chung cho cả trang web =>> thêm link vào bình luận nhé.</h3>
+<div class="fb-comments" data-href="https://holianh.github.io/" data-numposts="10"></div>
+</section>  -->
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=tuananhktmt&text=Keras+with+Python%20http%3A%2F%2Flocalhost%3A4000%2Fkeras%2FKeras-Modules%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fkeras%2FKeras-Modules%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Fkeras%2FKeras-Modules%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fkeras%2FKeras-Modules%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/keras/Keras/" class="pagination--pager" title="Keras with Python
+">Previous</a>
+    
+    
+      <a href="/keras/Keras-Code-Ngon/" class="pagination--pager" title="Link code ngon
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    <!--  -->
+
+  </article>
+
+
+
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/postimg/freeDBs.png"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a class="no-underline" href="/database/source%20code/Database-Resources/" rel="permalink">Free Code-Database Resources
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Links download CODE và Database miễn phí
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://miro.medium.com/max/1304/1*uokXCDa_O7jzfbUC9qS6cg.png"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a class="no-underline" href="/keras/Keras-Code-Ngon/" rel="permalink">Link code ngon
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "https://miro.medium.com/max/1304/1*uokXCDa_O7jzfbUC9qS6cg.png"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a class="no-underline" href="/keras/Keras/" rel="permalink">Keras with Python
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/my-personal-website-th.jpg"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a class="no-underline" href="/technology/markdown/github%20pages/how-i-created-this-website/" rel="permalink">How I Created this Awesome Website
+</a>
+      
+    </h3>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Using Jekyll &amp; Github Pages
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- <center>
+<div class="fb-comments" data-href="https://holianh.github.io/" data-numposts="10"></div>
+</center> -->
+
+<!-- end custom footer snippets -->
+
+        <!-- <center>
+<div class="fb-comments" data-href="https://holianh.github.io/" data-numposts="10"></div>
+</center> -->
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://twitter.com/tuananhktmt"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://facebook.com/anh211"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/holianh"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://youtube.com/tuananhktmt"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> youtube</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Tuấn Anh. Made with ❤</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+
+
+
+
+
+  
+      <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=2341188262621006";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    
+
+
+
+  </body>
+</html>

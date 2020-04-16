@@ -84,7 +84,7 @@ og_image                 : "/assets/images/default.jpg"
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : "Person"
-  name                   : "Tuấn Anh"
+  name                   : "Quality TNG"
   links:
     - "https://twitter.com/tuananhktmt"
     - "https://www.facebook.com/"

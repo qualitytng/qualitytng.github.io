@@ -99,12 +99,12 @@ analytics:
 
 # Site Author
 author:
-  name             : "Tuấn Anh"
+  name             : "Quality TNG"
   avatar           : "/assets/images/bio-photo.jpg"
-  home             : "https://holianh.github.io"
+  home             : "https://qualitytng.github.io"
   bio              : "Smart-Things"
   location         : "Thái Nguyên,VN"
-  email            : "tuananhktmt@gmail.com"
+  email            : "qualityTNG@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"

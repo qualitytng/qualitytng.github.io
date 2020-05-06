@@ -12,14 +12,14 @@ markdown: kramdown
 syntax_highlighter: rouge
 category_configs:
   -
-    name: Chuyện lập trình
-    url: chuyen-lap-trinh.html
+    name: DCS
+    url: DCS.html
   -
-    name: Chuyện nghề nghiệp
-    url: chuyen-nghe-nghiep.html
+    name: DPR
+    url: DPR.html
   -
-    name: Chuyện bên lề
-    url: chuyen-ben-le.html
+    name: Kiến thức cơ bản
+    url: kien-thuc-co-ban.html
   -
     name: Linux - ubuntu
     url: linux-ubuntu.html

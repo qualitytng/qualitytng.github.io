@@ -1,3 +1,3 @@
-# Repo of http://laptrinhcuocsong.com
+# Repo of http://qualitytng.github.io
 
-This repository contain content, files of [laptrinhcuocsong.com](laptrinhcuocsong.com)
+This repository contain content, files of [qualitytng.github.io](qualitytng.github.io)

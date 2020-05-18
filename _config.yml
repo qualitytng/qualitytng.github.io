@@ -1,10 +1,10 @@
-name: Lập trình cuộc sống
-description: Chỉ là blog của một thằng coder
-seo_description: Lập trình cuộc sống, blog  về kỹ thuật, rèn luyện kỹ năng và chia sẻ  kinh nghiệm phát triển bản thân dành cho tất cả lập trình viên
+name: Quality TNG Group
+description: Blog tổng hợp kỹ năng làm việc và kiến thức cho QC
+seo_description: Chia sẻ kiến thức QC
 avatar: images/logo.gif
 baseurl: 
-site_url: "https://laptrinhcuocsong.com"
-site_url_http: "http://laptrinhcuocsong.com"
+site_url: "https://qualitytng.github.io"
+site_url_http: "http://qualitytng.github.io"
 default_post_avatar: images/logo.gif
 permalink: /:title.html
 version: v1.2.0
@@ -12,14 +12,14 @@ markdown: kramdown
 syntax_highlighter: rouge
 category_configs:
   -
-    name: Chuyện lập trình
-    url: chuyen-lap-trinh.html
+    name: DCS
+    url: DCS.html
   -
-    name: Chuyện nghề nghiệp
-    url: chuyen-nghe-nghiep.html
+    name: DPR
+    url: DPR.html
   -
-    name: Chuyện bên lề
-    url: chuyen-ben-le.html
+    name: Kiến thức cơ bản
+    url: kien-thuc-co-ban.html
   -
     name: Linux - ubuntu
     url: linux-ubuntu.html

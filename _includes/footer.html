@@ -1,51 +1,85 @@
-<div id="footer-outer">
-	<footer id="footer" class="container">
-	<div class="box">
-		<h4>Theo dõi blog</h4>
-		<ul>
-			<li><a href="{{ site.site_url }}">Trang chủ</a></li>
-			<li><a target="_blank" href="https://www.facebook.com/hoilaptrinhviennhandan/" rel="noopener">Chúng tôi trên Facebook</a></li>
-			<li><a target="_blank" href="https://www.youtube.com/channel/UC5CIt5W4kq4ie0KJEdg2ztg?sub_confirmation=1" rel="noopener">Chúng tôi trên Youtube</a></li>
-			<li><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSelxVBIAXxrtOgyfJZ9GXXnbKKK6r5xbJKxodNPUoElNnsBCg/viewform" rel="noopener">Yêu cầu viết bài</a></li>
-			
-	  	</ul>
-	</div>
-	<div class="box">
-		<h4>Link hữu ích</h4>
-		<ul>
-			<li><a href="{{ site.site_url }}/gioi-thieu.html">Giới thiệu blog</a></li>
-			<li><a href="{{ site.site_url }}/bai-viet-hay.html">Bài viết hay</a></li>
-			<li><a href="{{ site.site_url }}/policies.html">Điều khoản</a></li>
-			<li><a target="_blank" href="http://buivannguyen.com" rel="noopener">Website Tác giả</a></li>
-	  	</ul>
-	</div>
-	<div class="box">
-		<h4>Blog bạn bè</h4>
-		<ul>
-			<li><a target="_blank" href="http://toidicodedao.com" rel="noopener">Tôi đi code dạo</a></li>
-			<li><a target="_blank" href="https://niviki.com" rel="noopener">Niviki.com</a></li>
-			<li><a target="_blank" href="http://www.giaosucan.com" rel="noopener">Giaosucan's Blog</a></li>
-			<li><a target="_blank" href="https://jaredchu.com/" rel="noopener">The Lazy Dev</a></li>
-	  	</ul>
-	</div>
-	<div class="box">
-		<h4>Kết nối</h4>
-		<ul>
-			<li><a target="_blank" href="http://buivannguyen.com" rel="noopener">Website Tác giả</a></li>
-			<li><a target="_blank" href="https://twitter.com/bui_van_nguyen" rel="noopener">Tôi trên Twitter</a></li>
-			<li><a target="_blank" href="http://instagram.com/bui_van_nguyen" rel="noopener">Tôi trên Instagram</a></li>
-			<li><a target="_blank" href="http://www.gocnhinphang.com" rel="noopener">Góc nhìn phẳng</a></li>
-	  	</ul>
-	</div>
-	<div class="clear"></div>
-	<div class="tag_cloud">
-		<h4>Tags</h4>
-		{% for tag in site.tags_config %}
-		<a href="{{ site.site_url }}/tags/{{ tag.slug }}" target="_blank">{{ tag.name }}</a>,
-	  	{% endfor %}
-	  </div>
-	</footer>
+<div class="footer">
+            <a href="#" class="footer-title"><span class="color-highlight">Quality TNG</span>  Group</a>
+            <p class="footer-text"></p>
+            <div class="footer-socials">
+                <a href="#" class="round-tiny shadow-medium bg-facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="round-tiny shadow-medium bg-twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="round-tiny shadow-medium bg-phone"><i class="fa fa-phone"></i></a>
+                <a href="#" data-menu="menu-share" class="round-tiny shadow-medium bg-red2-dark"><i class="fa fa-share-alt"></i></a>
+                <a href="#" class="back-to-top round-tiny shadow-medium bg-dark1-light"><i class="fa fa-angle-up"></i></a>
+                <div class="clear"></div>
+            </div>
+            <p class="footer-copyright">Copyright &copy; TNG PB1 <span id="copyright-year">2018-2020</span>. All Rights Reserved.</p>
+        </div>            
+    </div>
+    
+    <div id="menu-share" class="menu menu-box-bottom" data-menu-height="310" data-menu-effect="menu-parallax">
+        <div class="link-list link-list-1 content bottom-0">
+            <a href="#" class="shareToFacebook">
+                <i class="font-18 fab fa-facebook color-facebook"></i>
+                <span class="font-13">Facebook</span>
+                <i class="fa fa-angle-right"></i>
+            </a>
+            <a href="#" class="shareToTwitter">
+                <i class="font-18 fab fa-twitter-square color-twitter"></i>
+                <span class="font-13">Twitter</span>
+                <i class="fa fa-angle-right"></i>
+            </a>
+            <a href="#" class="shareToLinkedIn">
+                <i class="font-18 fab fa-linkedin color-linkedin"></i>
+                <span class="font-13">LinkedIn</span>
+                <i class="fa fa-angle-right"></i>
+            </a>  
+            <a href="#" class="shareToGooglePlus">
+                <i class="font-18 fab fa-google-plus-square color-google"></i>
+                <span class="font-13">Google +</span>
+                <i class="fa fa-angle-right"></i>
+            </a>      
+            <a href="#" class="shareToWhatsApp">
+                <i class="font-18 fab fa-whatsapp-square color-whatsapp"></i>
+                <span class="font-13">WhatsApp</span>
+                <i class="fa fa-angle-right"></i>
+            </a>   
+            <a href="#" class="shareToMail no-border">
+                <i class="font-18 fa fa-envelope-square color-mail"></i>
+                <span class="font-13">Email</span>
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+    
+    <div id="menu-2" class="menu menu-box-right" 
+         data-menu-width="75"
+         data-menu-effect="menu-over">
+                    
+        <div class="highlight-changer">
+            <a href="#" data-change-highlight="red1"><i class="fa fa-circle color-red1-dark"></i><span class="color-red2-light">Red</span></a>    
+            <a href="#" data-change-highlight="orange"><i class="fa fa-circle color-orange-dark"></i><span class="color-orange-light">Orange</span></a>    
+            <a href="#" data-change-highlight="pink2"><i class="fa fa-circle color-pink2-dark"></i><span class="color-pink2-light">Pink</span></a>    
+            <a href="#" data-change-highlight="magenta2"><i class="fa fa-circle color-magenta2-dark"></i><span class="color-magenta2-light">Purple</span></a>    
+            <a href="#" data-change-highlight="blue2"><i class="fa fa-circle color-blue2-dark"></i><span class="color-blue2-light">Blue</span></a>
+            <a href="#" data-change-highlight="aqua"><i class="fa fa-circle color-aqua-dark"></i><span class="color-aqua-light">Aqua</span></a>      
+            <a href="#" data-change-highlight="teal"><i class="fa fa-circle color-teal-dark"></i><span class="color-teal-light">Teal</span></a>      
+            <a href="#" data-change-highlight="mint"><i class="fa fa-circle color-mint-dark"></i><span class="color-mint-light">Mint</span></a>      
+            <a href="#" data-change-highlight="green2"><i class="fa fa-circle color-green2-dark"></i><span class="color-green2-light">Green</span></a>    
+            <a href="#" data-change-highlight="green1"><i class="fa fa-circle color-green1-dark"></i><span class="color-green1-light">Grass</span></a>       
+            <a href="#" data-change-highlight="yellow2"><i class="fa fa-circle color-yellow2-dark"></i><span class="color-yellow2-light">Sunny</span></a>    
+            <a href="#" data-change-highlight="yellow1"><i class="fa fa-circle color-yellow1-dark"></i><span class="color-yellow1-light">Goldish</span></a>
+            <a href="#" data-change-highlight="brown1"><i class="fa fa-circle color-brown1-dark"></i><span class="color-brown1-light">Wood</span></a>    
+            <a href="#" data-change-highlight="brown2"><i class="fa fa-circle color-brown2-dark"></i><span class="color-brown2-light">Earth</span></a>
+            <a href="#" data-change-highlight="dark1"><i class="fa fa-circle color-dark1-dark"></i><span class="color-dark1-light">Night</span></a>
+            <a href="#" data-change-highlight="dark2"><i class="fa fa-circle color-dark2-dark"></i><span class="color-dark2-light">Dark</span></a>
+            <a href="#" data-change-highlight="gray2"><i class="fa fa-circle color-gray2-dark"></i><span class="color-gray2-light">Gray</span></a>
+        </div>                        
+    </div>    
+    
+    <div class="menu-hider"></div>
 </div>
+
+
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/plugins.js" async></script>
+<script type="text/javascript" src="scripts/custom.js" async></script>
 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

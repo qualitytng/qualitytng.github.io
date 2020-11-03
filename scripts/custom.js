@@ -1214,8 +1214,8 @@ $(document).ready(function(){
         });
         
         if(!$('.offline-message').length){
-            $('#page').append('<p class="offline-message bg-red2-dark color-white center-text uppercase ultrabold">No internet connection detected</p>');
-            $('#page').append('<p class="online-message bg-green1-dark color-white center-text uppercase ultrabold">You are back online. Welcome!</p>');
+            $('#page').append('<p class="offline-message bg-red2-dark color-white center-text uppercase ultrabold">Không có Internet ,Kiểm tra lại kết nối</p>');
+            $('#page').append('<p class="online-message bg-green1-dark color-white center-text uppercase ultrabold">Đã Kết Nối lại</p>');
         }     
         var status = document.getElementById("status");
         var log = document.getElementById("log");
